@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* :focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-rows: 300px auto;
+      grid-template-rows: 300px auto;
+}
+
+.wrapper {
+  margin: 0 25px;
+  width: 100%;
+  max-width: 320px;
+}
+
+header {
+  position: relative;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("/images/pattern-bg.png") no-repeat;
+  background-size: cover;
+  background-position: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.4em;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+.result {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  -webkit-box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result section {
+  padding: 10px 0;
+}
+
+.result section h2 {
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #969696;
+  margin-bottom: 15px;
+}
+
+.result section p {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  color: #2b2b2b;
+}
+
+form input[type="text"]:hover {
+  cursor: pointer;
+}
+
+form input[type="text"].error {
+  border: 1px #ff0000 solid;
+}
+
+form button {
+  width: 60px;
+  padding: 25px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background: black;
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+form button:hover {
+  cursor: pointer;
+  background: #2b2b2b;
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#map {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    -ms-grid-rows: 280px auto;
+        grid-template-rows: 280px auto;
+  }
+  .wrapper {
+    max-width: 700px;
+  }
+  .result {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    max-width: 1110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .result {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    max-width: 1110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: left;
+    padding: 45px 0 35px;
+  }
+  .result section {
+    width: 100%;
+    padding: 0 45px 0 30px;
+    border-right: 1px rgba(150, 150, 150, 0.2) solid;
+  }
+  .result section h2 {
+    font-size: 0.7em;
+    margin-top: -10px;
+  }
+  .result section p {
+    font-size: 1.5em;
+  }
+  .result section:nth-last-child() {
+    border: 0;
+  }
+  form {
+    width: 100%;
+    max-width: 555px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-bottom: 48px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
